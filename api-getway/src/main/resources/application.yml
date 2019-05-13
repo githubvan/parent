@@ -1,0 +1,22 @@
+server:
+  port: 7777
+
+spring:
+  application:
+    name: api-getway
+
+eureka:
+    client:
+      service-url:
+        defaultZone: http://localhost:1111/eureka/
+zuul:
+  routes:
+    api-provider:
+      path: /provider/**
+      serviceId: provider-service
+
+provider-service:  #多实例配置，对应serviceId的值
+  ribbon:
+    listOfServers:  {........}
+
+

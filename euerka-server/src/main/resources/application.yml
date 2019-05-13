@@ -1,0 +1,13 @@
+server:
+  port: 1111
+eureka:
+  instance:
+    hostname: localhost  #配置注册中心的ip地址
+  client:
+    register-with-eureka: false #自己是注册中心，不注册自己
+    fetch-registry: false #不检索服务列表
+    service-url:
+      defaultZone:  http://${eureka.instance.hostname}:${server.port}/eureka/
+#spring:
+ # profiles:
+  #  active: peer2
