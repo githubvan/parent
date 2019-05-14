@@ -6,9 +6,9 @@ spring:
     name: api-getway
 
 eureka:
-    client:
-      service-url:
-        defaultZone: http://localhost:1111/eureka/
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
 zuul:
   routes:
     api-provider:
@@ -18,5 +18,22 @@ zuul:
 provider-service:  #多实例配置，对应serviceId的值
   ribbon:
     listOfServers:  {........}
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 50000 # Hystrix超时时间
+          strategy: THREAD
+
+ribbon:
+  ReadTimeout: 50000 # 处理时间
+  ConnectTimeout: 50000 # 连接时间
+  MaxAutoRetries: 0 #最大自动重试次数
+  MaxAutoRetriesNextServer: 1 # 换实例重试次数
+  MaxTotalHttpConnections: 8000 # 最大http连接数，越大越好，但到到达一个临界点之后，就不会提高响应速度了
+  MaxConnectionsPerHost: 1000 # 每个host连接数
 
 

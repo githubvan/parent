@@ -13,6 +13,8 @@
         <option value="$PROJECT_DIR$/feign-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/feign-remotecall/pom.xml" />
         <option value="$PROJECT_DIR$/api-getway/pom.xml" />
+        <option value="$PROJECT_DIR$/config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/config-client/pom.xml" />
       </list>
     </option>
   </component>

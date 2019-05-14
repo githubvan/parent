@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="euerka-server" />
+        <module name="config-server" />
         <module name="provider" />
         <module name="myspringcloud" />
         <module name="api-getway" />
+        <module name="config-client" />
         <module name="feign-consumer" />
         <module name="feign-remotecall" />
         <module name="ribbon-consumer" />
@@ -17,6 +19,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="api-getway" target="1.8" />
+      <module name="config-client" target="1.8" />
+      <module name="config-server" target="1.8" />
       <module name="euerka-server" target="1.8" />
       <module name="feign-consumer" target="1.8" />
       <module name="feign-remotecall" target="1.8" />
@@ -28,6 +32,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-getway" options="" />
+      <module name="config-client" options="" />
+      <module name="config-server" options="" />
       <module name="euerka-server" options="" />
       <module name="feign-consumer" options="" />
       <module name="feign-remotecall" options="" />
