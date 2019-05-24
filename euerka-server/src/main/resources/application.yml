@@ -2,10 +2,10 @@ server:
   port: 1111
 eureka:
   instance:
-    hostname: localhost  #ÅäÖÃ×¢²áÖĞĞÄµÄipµØÖ·
+    hostname: localhost  #é…ç½®æ³¨å†Œä¸­å¿ƒçš„ipåœ°å€
   client:
-    register-with-eureka: false #×Ô¼ºÊÇ×¢²áÖĞĞÄ£¬²»×¢²á×Ô¼º
-    fetch-registry: false #²»¼ìË÷·şÎñÁĞ±í
+    register-with-eureka: false #è‡ªå·±æ˜¯æ³¨å†Œä¸­å¿ƒï¼Œä¸æ³¨å†Œè‡ªå·±
+    fetch-registry: false #ä¸æ£€ç´¢æœåŠ¡åˆ—è¡¨
     service-url:
       defaultZone:  http://${eureka.instance.hostname}:${server.port}/eureka/
 #spring:

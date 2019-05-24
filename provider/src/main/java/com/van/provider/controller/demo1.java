@@ -1,7 +1,10 @@
 package com.van.provider.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Timer;
 
 /**
  * @Classname demo1
@@ -22,6 +25,16 @@ public class demo1 {
             e.printStackTrace();
         }
         return "hello,欢迎使用";
+    }
+
+    @Value("${name}")
+    private    String name;
+
+    @RequestMapping("config")
+    public   String string2(){
+
+        System.out.println(name);
+        return name;
     }
 
 }

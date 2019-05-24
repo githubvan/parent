@@ -1,0 +1,22 @@
+server:
+  port: 8888
+spring:
+  profiles:
+    active: native #本地模式
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native: classpath:/config
+        #git:
+        # uri: https://github.com/githubvan/springcloud-config.git   #git仓库的位置
+        #  search-paths: /config-repo  #仓库下路径的相对位置
+        #  username: 15874803018@163.com  #用户名
+        #  password: qwer1624  #密码
+        #  default-label: master
+
+
+
+
+
