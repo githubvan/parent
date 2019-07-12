@@ -2,11 +2,13 @@ package com.van.ribbonconsumer.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 
 /**
  * @Classname consumercontroller
@@ -32,5 +34,22 @@ public class consumercontroller {
 
     public String fallback(){
         return "error";
+    }
+
+    public static void main(String[] args) {
+        List<String> list=new ArrayList<>();
+        list.add("aaa");
+        list.add("bbb");
+        list.add("aaa");
+
+        HashSet<String> hashSet=new HashSet<>(list);
+        list.clear();
+        list.addAll(hashSet);
+        for (String s : list) {
+            System.out.println(s);
+        }
+
+
+
     }
 }
